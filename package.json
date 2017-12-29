@@ -2,24 +2,17 @@
   "name": "download-package-tarball",
   "version": "1.0.7",
   "description": "Download a node package as a tarball, for example from github or npm",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "xo && babel-tape-runner test.js",
     "build": "shx rm -rf dist && shx mkdir -p dist && babel lib --out-dir dist",
     "watch": "shx rm -rf dist && shx mkdir -p dist && babel -w lib --out-dir dist",
     "prepublish": "npm run build",
-    "posttest": "readme package.json > readme.md"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kesla/download-package-tarball.git"
+    "posttest": "readme package.json > readme.md",
+    "postinstall": "npm run build"
   },
   "author": "David Björklund <david.bjorklund@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kesla/download-package-tarball/issues"
-  },
-  "homepage": "https://github.com/kesla/download-package-tarball#readme",
   "devDependencies": {
     "babel-cli": "^6.10.1",
     "babel-core": "^6.10.4",
