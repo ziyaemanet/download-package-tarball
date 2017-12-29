@@ -8,11 +8,18 @@
     "build": "shx rm -rf dist && shx mkdir -p dist && babel lib --out-dir dist",
     "watch": "shx rm -rf dist && shx mkdir -p dist && babel -w lib --out-dir dist",
     "prepublish": "npm run build",
-    "posttest": "readme package.json > readme.md",
-    "postinstall": "npm run build"
+    "posttest": "readme package.json > readme.md"
   },
   "author": "David Björklund <david.bjorklund@gmail.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kesla/download-package-tarball/issues"
+  },
+  "homepage": "https://github.com/kesla/download-package-tarball#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kesla/download-package-tarball.git"
+  },
   "devDependencies": {
     "babel-cli": "^6.10.1",
     "babel-core": "^6.10.4",
